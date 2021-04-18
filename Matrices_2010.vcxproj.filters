@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns:atg="http://atg.xbox.com" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8e114980-c1a3-4ada-ad7c-83caadf5daeb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="DXUT">
+      <UniqueIdentifier>{a43c5c25-0e86-4a20-b64a-883785ff74fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Public">
+      <UniqueIdentifier>{e502905f-25ee-4b0b-8c87-a7a4a95e3dfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Private">
+      <UniqueIdentifier>{02a1f878-dfb6-4771-b5ae-3d4fb53e64c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DXUT\Optional\directx.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Resource Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="cPlanet.cpp">
+      <Filter>Resource Files\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrices.cpp">
+      <Filter>Resource Files\Private</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="global.h">
+      <Filter>Resource Files\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Resource Files\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="cPlanet.h">
+      <Filter>Resource Files\Public</Filter>
+    </ClInclude>
+    <CLInclude Include="resource.h">
+      <Filter>Resource Files\Public</Filter>
+    </CLInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Matrices.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
