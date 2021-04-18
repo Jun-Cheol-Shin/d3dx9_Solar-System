@@ -1,6 +1,0 @@
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Samples\C++\Direct3D\Tutorials\Tut03_Matrices\Debug\Matrices.exe
-C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Samples\C++\Direct3D\Tutorials\Tut03_Matrices\Debug\Matrices.pdb
-C:\Users\904si\OneDrive\문서\Visual Studio Projects\DirectXSamples\Matrices\Debug\Matrices.exe
-C:\Users\904si\OneDrive\문서\Visual Studio Projects\DirectXSamples\Matrices\Debug\Matrices.pdb
-D:\Downloads\새 폴더\Matrices\Debug\Matrices.exe
-D:\Downloads\새 폴더\Matrices\Debug\Matrices.pdb
