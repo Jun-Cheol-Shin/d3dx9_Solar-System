@@ -1,6 +1,7 @@
 # d3dx9_Solar-System
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/77636255/115138454-41be5380-a067-11eb-84e8-d6c12f2dd150.gif)
 
+### 행렬 계산
 ![Untitled-8a6b2297-10f8-4803-b5c0-72e743b3c748](https://user-images.githubusercontent.com/77636255/115138477-60244f00-a067-11eb-8ecb-97a075f5bd5d.png)
 ```c++
 void cPlanet::setMatrix(float speed, D3DXMATRIX _parentMat)
@@ -46,5 +47,37 @@ void cPlanet::setMatrix(float speed, D3DXMATRIX _parentMat)
 	}
 
 	OnFrameRender();
+}
+```
+
+### 법선 매핑
+![매핑](https://user-images.githubusercontent.com/77636255/115138767-0b81d380-a069-11eb-85ee-cc927b0a94d1.PNG)
+
+```c++
+void cPlanet::setTexture()
+{
+	if (SUCCEEDED(D3DXCreateSphere(p_dev, p_radius, mDetail, mDetail, &mesh, NULL)))
+	{
+		if (SUCCEEDED(mesh->CloneMeshFVF(D3DXMESH_SYSTEMMEM, CVERTEX_NTEX::FVF, p_dev, &temp_mesh)))
+		{
+			mesh->Release();
+		}
+	}
+
+	CVERTEX_NTEX* pVerts;
+
+	if (SUCCEEDED(temp_mesh->LockVertexBuffer(0, (void**)&pVerts)))
+	{
+		int numVerts = temp_mesh->GetNumVertices();
+
+		for (int i = 0; i < numVerts; i++)
+		{
+			pVerts->tu = asinf(pVerts->normal.x) / D3DX_PI + 0.5f;
+			pVerts->tv = asinf(pVerts->normal.y) / D3DX_PI + 0.5f;
+			pVerts++;
+		}
+
+		temp_mesh->UnlockVertexBuffer();
+	}
 }
 ```
